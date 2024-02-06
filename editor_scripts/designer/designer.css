@@ -1,0 +1,59 @@
+.designer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.designer .dropdown {
+  width: auto;
+}
+
+.designer .left-pane {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 60%;
+    width: 320px;
+    padding-top: 48px;
+    padding-bottom: 32px;
+    overflow-y: scroll;
+    background: #bfc6cd;
+    color: black;
+    border-right: 1px solid black;
+}
+
+.designer .content-pane {
+    position: absolute;
+    left: 0px;
+    width: 256px;
+    top: 40%;
+    bottom: 0px;
+    padding: 32px;
+    overflow-y: scroll;
+    color: black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    background: #bec6cc;
+}
+
+.designer .right-pane {
+    position: absolute;
+    left: 321px;
+    right: 0px;
+    border: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: white;
+    overflow-y: scroll;
+}
+
+.designer .right-pane iframe {
+	border:none;
+    background: white;
+}
+
+table.designer-options td {
+    vertical-align: top;
+}

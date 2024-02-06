@@ -1,0 +1,23 @@
+<div class="form-element-container {this.class}">
+    <div class="dropdown ">
+        <label class="form-label" if="this.label !== undefined">{translate(this.label)}</label>
+        <div element="dropdownform" (blur)="tag.handleBlur(event)" (focus)="tag.handleFocus(event)"
+            class="form-element dropdown-form-element {tag.itemListVisible ? 'focus' : ''} {tag.chosenItems.length == 0 ? 'default-option' : ''}"
+            tabindex="0" (click)="tag.toggleOptions()" (keydown)="tag.elementKeydown(event)">
+            <span class="dropdown-down">▾</span> {tag.getChosenItems()}
+        </div>
+        <div class="itemlist-container">
+            <div (mousedown)="tag.handleMousedown(event)" element="itemlist"
+                class="{tag.itemListVisible ? 'dropdown-options dropdown-options-visible' : 'dropdown-options '}"
+                for="opt of this.options">
+                
+                <div (click)="this.clickedOption(opt)"
+                    class="dropdown-option {opt.isPlaceholder then 'dropdown-placeholder'}">{opt.name}</div>
+            </div>
+        </div>
+
+        <input type="hidden" value="{this.chosenItems.length > 0 then this.chosenItems[0].value}" name="{this.name}" />
+        <div class="clear"></div>
+        <p class="error-message" if="!!this.errorMessage">{this.errorMessage}</p>
+    </div>
+</div>

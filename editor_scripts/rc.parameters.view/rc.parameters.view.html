@@ -1,0 +1,9 @@
+<div>
+    <div if="this.parameters && this.parameters.length > 0">
+        <h4>{this.label ? this.label : 'Parameters'}</h4>
+        <ul class="list" for="parameter of this.parameters">
+            <li><b>{parameter.title} </b>({parameter.name}, {parameter.type})
+            <div if="parameter.documentation != null">{parameter.documentation}</div></li>
+        </ul>
+    </div>
+</div>

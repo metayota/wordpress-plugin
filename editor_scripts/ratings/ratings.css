@@ -1,0 +1,9 @@
+.rating {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.rating img.icon {
+    position: relative;
+    top: 4px;
+}

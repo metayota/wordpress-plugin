@@ -1,0 +1,22 @@
+.modal-window {
+    height: auto;
+}
+
+.jj-parameter-list {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.jj-editor-parameters-validators li i {
+    position: relative;
+    top: 5px;
+}
+
+.editor-parameters table.table {
+    margin-left: -12px;
+}
+
+.editor-parameters table.table td, .editor-parameters table.table th {
+    border:none;
+    padding: 12px;
+}

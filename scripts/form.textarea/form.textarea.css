@@ -1,0 +1,27 @@
+.form-textarea {
+	margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.form-textarea label {
+	display: block;
+    margin-bottom: 4px;
+}
+
+.form-textarea textarea {
+	width: calc(100% - 32px);
+	border: 1.6px solid black;
+	height: 144px;
+	border-radius: 8px;
+	padding: 16px;
+	outline: 0;
+	cursor: pointer;
+	background:#f3f3f3;
+    font-family: inherit;
+    font-size: inherit;
+
+}
+
+.form-textarea textarea:focus {
+    border-color: #0a6ca9;
+}

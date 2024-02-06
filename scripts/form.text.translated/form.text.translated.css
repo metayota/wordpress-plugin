@@ -1,0 +1,63 @@
+.form-text-translatable {
+	margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.translation-info {
+    border:1px solid gray;
+    background: #efefef;
+    padding:20px;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: white;
+}
+
+.form-text-translatable input {
+    color: black;
+	width: calc( 100% - 32px );
+	border: 1.6px solid black;
+	height: auto;
+	border-radius: 6px;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	outline: 0;
+	cursor: pointer;
+    background: #f3f3f3;
+}
+
+.translation-info input {
+    margin-bottom: 10px;
+}
+
+.form-text-translatable input[readonly] {
+	color: #777;
+}
+
+
+
+.form-text-translatable label {
+	display: block;
+    margin-bottom: 4px;
+}
+
+/** textarea **/
+
+
+.form-text-translatable textarea {
+	width: calc(100% - 32px);
+	border: 1.6px solid black;
+	height: 144px;
+	border-radius: 8px;
+	padding: 16px;
+	outline: 0;
+	cursor: pointer;
+	background:#f3f3f3;
+
+}
+
+.form-text-translatable textarea:focus {
+    border-color: #0a6ca9;
+}

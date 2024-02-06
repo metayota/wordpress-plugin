@@ -1,0 +1,16 @@
+<div>
+    <div if="this.add">
+	    <title title="Ratings"></title>
+    </div>
+    <div for="rating of this.ratings">
+        <div class="rating">
+            <h3>{rating.title} <stars.rating stars="{rating.rating}"></stars.rating> <img src="/resource/rc.icon/delete.svg" (click)="this.deleteRating(this.resourcename)" if="rating.user_id == loggedInUser$.id" class="icon"/></h3>
+            <div>Rating from {this.formatTime( rating.date )} by {rating.username}:</div>
+            <p>{rating.description}</p>
+        </div>
+    </div>
+     <div if="this.add">
+        <form.resource element="addRatingForm" resourcetype="rating" label="Your Rating" submitlabel="Rate Resource" (submit)="this.addRating(event)">
+        </form.resource>
+    </div>
+</div>

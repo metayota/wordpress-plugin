@@ -1,0 +1,18 @@
+.droparea {
+    height: 21px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 4px;
+}
+
+.droparea.active {
+    background: #4ba2f1;
+}
+
+.j-arrange {
+    display: inline-block;   
+}
+
+.droparea {
+    display: inline-block;
+}

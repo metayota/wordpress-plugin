@@ -1,0 +1,120 @@
+.design-item input.item-name {
+    background: transparent;
+    border:transparent;
+    outline:none;
+    font-size: 14px;
+}
+
+.droparea-container {
+    position: relative;
+}
+
+.droparea-container-last {
+    height: 3px;
+    margin-left: 10px;
+}
+
+
+
+.design-item div.droparea {
+    background: #7692b3;
+    height: 4px;
+    
+    margin-top: 0px;
+    margin-bottom: 0px;
+    opacity: 0;
+    padding: 0px;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    left: 0px;
+}
+
+.design-item div.droparea.active {
+    opacity: 1;
+}
+
+.design-item .tree-item {
+    cursor: pointer;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-decoration: none;
+}
+
+.tree-item a {
+    margin-left:16px;
+    display: none;
+}
+
+.design-item .tree-item.selected {
+    background: #252c33;
+    color: white;
+}
+
+.design-item .tree-item.selected.dragging {
+    background:rgba(0,0,0,0);
+}
+
+.design-item .tree-item.selected a, .design-item .tree-item:hover a {
+  display: inline-block;
+  color: #2786d0;
+}
+
+.design-item .tree-item {
+    padding-left: 35px;
+}
+
+.design-item .subitems .tree-item {
+    padding-left: 50px;
+    padding-right: 32px;
+}
+
+.design-item .subitems .subitems .tree-item {
+    padding-left: 66px;
+}
+
+.design-item .subitems .subitems .subitems .tree-item {
+    padding-left: 78px;
+}
+
+.design-item .subitems .subitems .subitems .subitems .tree-item {
+    padding-left: 90px;
+}
+
+.design-item .subitems .subitems .subitems .subitems .subitems .tree-item {
+    padding-left: 102px;
+}
+
+.design-item .subitems .subitems .subitems .subitems .subitems .subitems .tree-item {
+    padding-left: 114px;
+}
+
+
+
+.design-item .droparea {
+    left: 35px;
+}
+
+.design-item .subitems .droparea {
+    left: 50px;
+}
+
+.design-item .subitems .subitems .droparea {
+    left: 66px;
+}
+
+.design-item .subitems .subitems .subitems .droparea {
+    left: 78px;
+}
+
+.design-item .subitems .subitems .subitems .subitems .droparea {
+    left: 90px;
+}
+
+.design-item .subitems .subitems .subitems .subitems .subitems .droparea {
+    left: 102px;
+}
+
+.design-item .subitems .subitems .subitems .subitems .subitems .subitems .droparea {
+    left: 114px;
+}

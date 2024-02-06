@@ -1,0 +1,29 @@
+.j-settings {
+    position: absolute;
+    right: 49px;
+    top: 86px;
+    background: #555e68;
+    max-height: calc( 100% - 182px );
+    width: 300px;
+    z-index: 1000;
+    background: white;
+    padding: 32px;
+    overflow: scroll;
+    border-radius: 8px;
+    border-top: 1px solid rgba(0, 25, 50, 0.15);
+    border-left: 1px solid rgba(0, 25, 50, 0.15);
+    box-shadow: 2px 2px 3px rgba(0, 25, 50, 0.15);
+}
+
+.j-settings h2 {
+    margin-top: 0px;
+}
+
+@media only screen and (max-width: 600px) { 
+    .j-settings {
+        width: 80%;
+        right: 0px;
+        left: 0px;
+        padding: 10%;
+    }
+}

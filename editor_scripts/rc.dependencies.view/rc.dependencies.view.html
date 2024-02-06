@@ -1,0 +1,9 @@
+<div>
+    <div if="this.dependencies and this.dependencies.length > 0">   
+        <h4>{this.label ? this.label : 'Dependencies'}</h4>
+		<ul class="list" for="dependency of this.dependencies">
+			<li><b>{dependency.title}</b> {dependency.version}<br/>{dependency.name}, {dependency.type}</li>
+		</ul>
+		<p if="this.dependencies and this.length == 0">No dependencies</p>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<h1>Table </h1>
+<div class="rc-db-table">
+    <table class="table" if="!!this.data">
+        <thead>
+            <tr for="key of this.keys">
+                <th>{key}</th>
+            </tr>
+        </thead>
+        <tbody for="item of this.data">
+            <tr for="key of this.keys">
+                <td>{item[key]}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,12 @@
+.overview dt {
+    width: 20%;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.overview dd {
+    width: 65%;
+    display: inline-block;
+    font-weight: bold;
+}

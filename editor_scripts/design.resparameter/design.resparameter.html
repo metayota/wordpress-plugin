@@ -1,0 +1,15 @@
+<div>
+    <h3 if="this.label != undefined">{this.label}</h3>
+    <div if="this.parameters != undefined">
+        <div class="parameters" for="parameter of this.parameters">
+            <div if="this.readonly === true || parameter.readonly === true">
+                <object.viewparameter documentation="{this.documentation}" parameter="{parameter}" value="{parameter.value}"></object.viewparameter>
+            </div>
+
+            <div if="this.readonly !== true && !parameter.readonly">
+                <form.element (register)="this.elements.push(event)" required="{parameter.required}" validators="{parameter.validators}" (change)="this.parameterChanged(parameter.name,event)" name="{parameter.name}" label="{parameter.title}" type="{parameter.type}" value="{parameter.value}" options="{parameter.options}"></form.element> 
+                <div class="element-documentation" if="this.showdocumentation && parameter.documentation && parameter.documentation != ''">{parameter.documentation}</div>
+            </div>
+        </div>
+    </div>
+</div>

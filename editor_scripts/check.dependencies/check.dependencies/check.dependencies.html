@@ -1,0 +1,9 @@
+<h1>Checking Dependencies</h1>
+<p>
+    Please check if the following resources should be added to the dependencies of the resource "this.resource":
+</p>
+<ul class="dependencies-list" for="dependency of this.dependencies">
+    <li><form.checkbox (change)="this.checking[dependency] = event" value="{true}" label="{dependency}"></form.checkbox></li>
+</ul>
+    
+<form.button (click)="this.submit()" label="<?= translate('add_to_dependencies') ?>"></form.button>

@@ -1,0 +1,46 @@
+.pages .form-button {
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 3px;
+    padding: 0px;
+}
+
+.database-editor table {
+    width: 100%;
+}
+
+.database-editor tr:nth-child(even), .database-editor thead tr {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.database-editor td, .database-editor td .object-view-content {
+    font-weight: normal;
+}
+
+.pages .btn-container {
+    margin-right: 8px;
+}
+
+.database-editor table td, .database-editor table td .view-text-value {
+    max-width: 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+
+.database-editor .object-view-parameter  {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.j-editor .database-editor table.table td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.form-button.highlighted {
+    background: white;
+    color: black;
+}

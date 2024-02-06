@@ -1,0 +1,6 @@
+<div>
+  <title title="Configure your resource"></title>
+  <div if="!!this.resourceTypeName">
+    <form.resource (change)="this.configurationUpdated(event)" resourcetype="{this.resourceTypeName}" value="{this.resource.configuration}"></form.resource>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.form-file {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.form-file label {
+    display: block;
+}
+
+.form-file .form-button {
+    margin-top: 4px;
+    margin-bottom: 0px;
+}

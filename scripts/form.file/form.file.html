@@ -1,0 +1,6 @@
+<div class="form-file {this.class}"> 
+	<label if="this.label !== undefined" class="form-label">{translate(this.label)}</label>
+	<div if="!this.uploading"><form.button (click)="this.chooseFile()" label="{this.value ? this.value : this.uploadLabel}"></form.button> <span if="this.value != undefined && this.value != ''"><form.button (click)="this.removeFile()" label="{translate('remove_file')}"></form.button></span></div>
+	<div if="this.uploading"><progress></progress></div>
+    <p class="error-message" if="!!this.errorMessage">{this.errorMessage}</p>
+</div>

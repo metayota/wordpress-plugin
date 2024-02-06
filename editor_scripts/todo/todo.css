@@ -1,0 +1,92 @@
+
+.filter-todo {
+    margin-left:30px;
+    margin-left: -18px;
+    width: calc(100% + 36px);
+    display: flex;
+    gap: 32px;
+    
+}
+.filter-todo .dropdown-options {
+    position: absolute;
+}
+
+.todo .icon {
+    position: relative;
+    top: 2px;
+}
+
+.j-editor .tab-todo table.table {
+    margin-left: -61px;
+    width: calc(100% + 122px);
+}
+
+.tab-todo {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.todo-content-add {
+    margin-left: -18px;
+    width: calc(100% + 36px);
+}
+
+.todo table.table td, .todo table.table th {
+	border: none;
+}
+
+
+
+.todo-card {
+    width: 100%;
+    height: 100%;
+}
+
+
+.todo-footer {
+    padding:24px;
+}
+
+.todo-delete {
+    display: none;
+}
+
+.todo-item {
+	position: relative;
+    margin-bottom: 16px;
+}
+
+.todo-item:hover .todo-delete {
+    visibility: visible;
+}
+
+.todo-item-title {
+    display: inline-block;
+}
+
+.todo-checkbox.done label {
+    color: green;
+}
+
+.todo-delete {
+	display: inline-block;
+    visibility: hidden;
+    position: relative;
+    top: 8px;
+    margin-left: 8px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.todo ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.todo .checkbox {
+    display: inline-block;
+}
+
+.todo .todo-description textarea {
+    height: 120px;
+}

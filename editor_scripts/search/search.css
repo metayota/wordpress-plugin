@@ -1,0 +1,45 @@
+.editor-search {
+    display: none;
+}
+
+.editor-search .close-btn {
+    width: 18px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
+
+.search-results {
+    position: absolute;
+    top: 148px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: scroll;
+    padding: 20px;
+    
+}
+
+.search-results code {
+    color: white;
+}
+.editor-search.visible {
+    display: block;
+    box-shadow: 0px 0px 50px black;
+}
+.editor-search { 
+    position: fixed;
+    left: 0px;
+    width: 300px;
+    top: 0px;
+    bottom: 0px;
+    background: #1f1f1f;
+    color: white;
+    border: none;
+    border-right: 1px solid #555;
+    margin-left: 0px;
+    max-height: none;
+    padding: 32px;
+    
+}

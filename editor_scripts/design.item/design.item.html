@@ -1,0 +1,14 @@
+<div class="design-item">
+    <div class="tree-item {this.selected then 'selected'} "  (click)="this.didSelectItem(this, this, this)">
+        <span class="draggable" draggable="true" (dragstart)="this.drag(event)" ><b>{this.value ? (this.value.name ? this.value.name : 'Item') : 'Item'} <a (click)="this.addItem()">+</a> <a (click)="this.deleteItem()">-</a></b></span>
+    </div>
+    <div class="subitems" if="!!this.items" for="subitem of this.items">
+        <div class="droparea-container"> 
+            <design.item parent="{this}" (deleted)="this.deleteSubitem( subitem_index )" value="{subitem}" selecteditem="{this.selecteditem}" (selected)="this.didSelectItem(event.itemName, event.element, event.item)" (change)="this.designItemChanged(event, subitem_index)" tags="{this.tags}"></design.item>
+            <div class="droparea" (dragleave)="this.leaveDroparea(event,node)" (dragover)="this.allowDrop(event,node)" (drop)="this.drop(event, subitem_index)" ></div>
+        </div>
+    </div>
+    <div class="droparea-container droparea-container-last" if="!!this.items && this.items.length > 0"> 
+        <div class="droparea" (dragleave)="this.leaveDroparea(event,node)" (dragover)="this.allowDrop(event,node)" (drop)="this.drop(event, this.items.length)" ></div>
+    </div>
+</div>

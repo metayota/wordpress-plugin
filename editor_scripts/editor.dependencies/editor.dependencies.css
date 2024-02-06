@@ -1,0 +1,64 @@
+.editor-dependencies .dropdown {
+    display: inline-block;
+    margin-bottom: 0px;
+	margin-top:0px;
+    width: 100%;
+}
+
+.editor-dependencies .form-element-container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.editor-dependencies .dropdown-form-element {
+    padding-left: 0px;
+}
+
+.editor-dependencies table.table input {
+    background: transparent;
+    color: white;
+}
+
+.editor-dependencies .form-text {
+    display: inline-block;
+    width: 150px;
+    margin-left: 16px;
+	margin: 0px;	
+}
+
+.editor-dependencies .form-element {
+	background: #bfc6ce;
+	border-color: #bfc6ce;
+}
+
+.editor-dependencies .table .td {
+	padding: 0px;
+}
+
+.editor-dependencies .form-element {
+	border:none;
+    background: transparent;
+    color: white;
+}
+.editor-dependencies .dropdown-options {
+	top: 5px;
+    left: -8px;
+    max-width: 383px;
+    width: calc( 100% + 9px );
+	border:4px outset;
+	background: #efefef;
+    position: absolute;
+}
+
+.editor-dependencies .focus {
+	
+}
+
+.editor-dependencies .dropdown-option.focus {
+	background: #4682e2;
+	color: white;
+}
+
+.editor-dependencies .dropdown-down {
+    color: white;
+}

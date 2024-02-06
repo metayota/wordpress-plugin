@@ -1,0 +1,1256 @@
+body {
+    background: #222;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body > div {
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+body,
+textarea,
+input {
+    font-family: sans-serif, 'Avenir Next', 'DejaVu Sans';
+    font-size: 15px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    margin: 340px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+/*** NEW LAYOUT ***/
+
+ body {
+        background: gray url(/exr_bg_f.webp) 0%;
+        background-size: cover;
+        
+    }
+    body .j-editor .tab.tab-content>div {
+        box-shadow:1px 3px 60px rgb(0 33 57);
+        background:#011f3bb0;
+        margin-top:0px;
+        border:1px solid rgb(0 33 57 / 30%);
+    }
+body .j-editor .editor-controls > .dropdown .dropdown-form-element, body .j-editor .editor-controls > .rc-dropdown > .dropdown .dropdown-form-element {
+    background:rgba(255,255,255,0.2)
+}
+
+body .j-editor .editor-controls .menu-dropdown .dropdown-form-element {
+    background-color:transparent;
+}
+
+     body .j-editor .tab.tab-content>div h1:first-child,  body .j-editor .tab.tab-content>div h2:first-child {
+        margin-top:0px;
+     }
+
+    body .j-editor {
+        background:transparent;
+    }
+
+    body .tab {       
+        background:transparent;
+        top:104px;
+    }
+   body  .editor-controls {
+        background: #0113207a;
+        box-shadow:1px 3px 60px rgb(0 33 57);
+        border-bottom:1px solid rgb(0 33 57 / 30%);
+    }
+
+    #rc-editor.tab-vscode {
+        background: #00000096;
+    }
+    body .tab-vscode .editor-controls {
+        background: transparent;
+        box-shadow:none;
+        border-bottom:none;
+    }
+
+    body .tab-container {
+        background:transparent;
+        font-size:17px;
+    }
+    body .tab-content .tasks {
+    margin: -59px;
+    }
+
+
+    body .monaco-editor, body .monaco-editor-background {
+        background-color: #00000030;
+    }
+
+    body #vscodeeditor {
+        background: transparent;
+    }
+
+    body .monaco-editor .margin {
+        background-color:#ffffff0a
+    }
+
+
+
+    /**** EDITOR.CSS **/
+
+.j-editor {
+    z-index: 10000;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    outline: none;
+    background: white;
+    user-select: none;
+}
+table.table.colored tr:nth-child(odd) {
+	background: rgba(0,0,0,0.2);
+}
+table.table.colored tr:nth-child(even) {
+	background: rgba(255,255,255,0.2);
+}
+
+table.table.colored thead tr:first-child {
+	background: rgba(255,255,255,0.2);
+}
+body .implementation .tab-container {
+    max-width: calc(100% - 60px);
+}
+.j-editor .element-documentation {
+    color: #a0daff;
+}
+
+input::placeholder, input:active::placeholder, input:focus::placeholder {
+    color: #929292;
+}
+
+.modal-content .form-button, .j-editor .j-settings .form-button {
+    background-color: #586e84;
+    color: white;
+}
+
+.modal-content .form-button:hover, .j-editor .j-settings .form-button:hover {
+    background-color: #3d4f62;
+    color: white;
+}
+
+.j-editor .form-button {
+    background: rgb(255 255 255 / 30%);
+    backdrop-filter: blur(5px);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.j-editor .form-button:hover {
+    background: rgb(255 255 255 / 50%);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-weight: bold;
+}
+
+
+.action-icons img {
+    filter: invert(1);
+}
+
+.jsettings .action-icons img {
+    filter:none;
+}
+
+.rc-dropdown .dropdown-options,
+.menu-dropdown .dropdown-options,
+.tab-dropdown .dropdown-options {
+    overflow: visible;
+}
+
+.image {
+    width: 100%;
+    border: 1px solid #555;
+}
+
+img.icon {
+    position: relative;
+    top: 3px;
+}
+
+input::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: white;
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+    color: #CCC;
+}
+
+input:focus:-moz-placeholder {
+    color: white;
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: #CCC;
+}
+
+input:focus::-moz-placeholder {
+    color: white;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+    color: #CCC;
+}
+
+input:focus:-ms-input-placeholder {
+    color: white;
+}
+
+img.icon {
+    height: 21px;
+    margin-left: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+ul.list li {
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+#j-editor-content iframe {
+    border: none;
+    border-top: 1px solid #2786d0;
+    background: white;
+}
+
+.j-editor .form-text input {
+    background: white;
+    background: #e6e6e6;
+}
+
+a,
+a:link,
+a:active,
+a:hover,
+a:visited {
+    text-decoration: underline;
+    color: white;
+    /*font-size: 13.33px;*/
+    cursor: pointer;
+
+}
+
+.dialog a {
+    color: #456d88;
+}
+
+.tab.includepage {
+    background: white;
+    padding: 64px;
+}
+
+.tab.implementation {
+    overflow-y: hidden;
+}
+
+#vscodeeditor {
+    top: 148px;
+    position: fixed;
+}
+
+.j-editor .editor-controls .icon-button.control-settings {
+    margin-right: 0px;
+}
+
+.j-editor .editor-controls .icon-button {
+    position: relative;
+    width: 52px;
+    height: 39px;
+    background: none;
+    min-width: 50px;
+}
+
+.editor-controls.rc-dropdown {
+    width: auto;
+}
+
+.j-editor .editor-controls.rc-dropdown .dropdown-form-element {
+    color: white;
+    border-radius: 20px;
+    background-size: auto 144%;
+    background-repeat: no-repeat;
+    background-position: center right;
+    width: auto;
+    margin-right: 16px;
+    font-weight: bold;
+    background: #2e88ce;
+    border: 1px solid #2e88ce;
+}
+
+.j-editor .editor-controls .dropdown-form-element {
+    white-space: nowrap;
+    overflow: hidden;
+    height: 21px;
+    font-size: 17px;
+    line-height: 21px;
+    background: #586e84;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.j-editor .editor-controls.rc-dropdown .dropdown-options {
+    min-width: 250px;
+}
+
+.rc-dropdown .dropdown-form-element .dropdown-down {
+    display: none;
+}
+
+.dropdown.implementation-tabs-dropdown {
+    position: absolute;
+    top: -10px;
+    right: 12px;
+}
+
+.dropdown.implementation-tabs-dropdown .dropdown-form-element {
+    background: transparent;
+    border: transparent;
+    color: white;
+    font-size: 27px;
+    position: relative;
+    top: -11px;
+    text-align: right;
+}
+
+.dropdown.implementation-tabs-dropdown .dropdown-down {
+    display: none;
+}
+
+.dropdown.implementation-tabs-dropdown .dropdown-options {
+    right: 0px;
+    width: 200px;
+}
+
+.preview-db-table {
+    padding: 64px;
+}
+
+.j-editor .editor-controls .menu-dropdown .dropdown-form-element {
+    color: transparent;
+    background-image: url(/resource/rc.icon/menu_white.svg);
+    background-size: 37%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: #222222;
+}
+
+.j-editor .editor-control.icon-button.disabled {
+    display: none;
+}
+
+.preview-tab iframe {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.editor-control.icon-button span {
+    visibility: hidden;
+}
+
+.icon-button img {
+    position: absolute;
+    bottom: 0px;
+    height: 19px;
+    top: 53%;
+    margin-top: -11px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.icon-button img.back-button {
+    position: absolute;
+    bottom: 0px;
+    height: 24px;
+    top: 6px;
+    margin-top: 0px;
+    margin-left: -14px;
+}
+
+.see-button img {
+    height: 24px;
+    top: 46%;
+    left: 48%;
+    margin-left: -12px;
+}
+
+.j-editor .form-element {
+    border: 1.6px solid black;
+    color: black;
+}
+
+.j-editor .j-settings .form-element {
+    border-color: black;
+}
+
+.editor-logo-container {
+    display: inline-block;
+    position: relative;
+    width: 37px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.editor-logo {
+    width: 37px;
+    height: 37px;
+    margin-right: 32px;
+    position: absolute;
+    top: 0px;
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.j-editor .tag-dropdown.livesearch {
+    margin-left: 0px;
+    flex-grow: 1;
+    min-width: 120px;
+}
+
+.j-editor .monaco-editor .view-overlays .current-line {
+    border: 1px solid #7FbFfF;
+    opacity: 0.5;
+}
+
+.j-editor .monaco-editor .cursor {
+    background-color: #7FbFfF;
+    border-color: #7FbFfF;
+    color: #515052;
+}
+
+.r-logo {
+    position: absolute;
+    display: none;
+    top: 30%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    z-index: 10000;
+}
+
+.editor-controls button {
+    margin-right: 16px;
+}
+
+label {
+    margin-bottom: 4px;
+    display: block;
+    font-weight: bold;
+}
+
+.preview-button {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: auto;
+    margin-right: 16px;
+    padding-bottom: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: auto;
+}
+
+.editor-controls .menu-dropdown .dropdown {
+    margin-right: 16px;
+    padding-right: 16px;
+}
+
+.editor-controls .dropdown .dropdown-options {
+    position: absolute;
+    top: 6px;
+}
+
+.menu-dropdown .dropdown .dropdown-options {
+    width: 290px;
+}
+
+.editor-controls .dropdown .dropdown-options {
+    border: none;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.j-editor table.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.j-editor table.table th,
+.j-editor table.table td {
+    text-align: left;
+    padding: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.j-editor .livesearch .search,
+.j-editor .livesearch .doppelpunkt {
+    color: #b4d1ff;
+}
+
+.j-editor .editor-controls .dropdown-options {
+    max-height: 420px;
+    border-radius: 8px;
+}
+
+.j-editor .editor-controls .tag-dropdown .dropdown-options {
+    max-height: 500px;
+    overflow-x: hidden;
+}
+
+.editor-controls .tab-dropdown .dropdown-options {
+    max-height: 500px;
+    width: auto;
+}
+
+.j-editor .preview-tab.tab-content {
+    padding: 0px;
+}
+
+.tab-content .tasks {
+    margin: -64px;
+}
+
+
+
+.tab-container {
+    background: #222;
+    color: white;
+    padding-bottom: 3px;
+}
+.j-editor .tab-item.active {
+    border-bottom: 5px solid #ffffff;
+}
+
+.editor-controls .dropdown-form-element,
+.editor-controls .button {
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: #292d31;
+    border: none;
+}
+
+.editor-controls .menu-dropdown .dropdown {
+    margin-left: 0px;
+}
+
+.editor-controls .dropdown-form-element:focus,
+.editor-controls .dropdown-form-element.focus,
+.editor-controls .button:focus {
+    border-radius: 20px;
+}
+
+.editor-controls .dropdown-down {
+    color: white;
+}
+
+.editor-controls .button.disabled {
+    color: #777;
+}
+
+.editor.hidden {
+    display: none;
+}
+
+.editor.compact {
+    width: 420px;
+}
+
+.tag-dropdown {
+    margin-left: 0px;
+}
+
+.editor.compact .tag-dropdown,
+.editor.compact .tab-dropdown {
+    width: 100%;
+    display: block;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.tab {
+    background-color: #bfc6ce;
+    background-color: #0e75b7;
+    background-color: #0e5784;
+    color: white;
+}
+
+.implementation.tab {
+    padding: 0px;
+}
+
+.editor-controls .dropdown.action-button-options {
+    width: auto;
+    margin-left: 0px;
+}
+
+.action-button-options .dropdown-form-element {
+    width: auto;
+    display: inline-block;
+    float: right;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.action-button-options .dropdown-options {
+    border-top: 1px solid #ccc;
+    top: 42px;
+    right: 0px;
+    width: 330px;
+}
+
+.show-editor {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    cursor: pointer;
+    padding: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 16px;
+    border-radius: 4px;
+    background: #ccc;
+    color: white;
+}
+
+.action-button-options .dropdown-down {
+    display: none;
+}
+
+.code-editor {
+    position: absolute;
+    top: 75px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.compact .code-editor {
+    top: 120px;
+}
+
+.editor-controls .editor-control {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 16px;
+    margin-bottom: 0px;
+}
+
+.editor-controls {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background: #222;
+    display: flex;
+}
+
+.compact .editor-controls {
+    display: block;
+}
+
+.editor-controls .button {
+    width: 100px;
+    height: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.editor-controls .menu-dropdown .dropdown {
+    width: auto;
+}
+
+.editor-controls .menu-dropdown .dropdown .dropdown-down {
+    display: none;
+}
+
+.menu-dropdown .dropdown .dropdown-form-element {
+    padding-right: 16px;
+}
+
+.editor-controls .dropdown:first-child {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.editor-controls .button {
+    height: auto;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+}
+
+.button.disabled {
+    color: gray;
+}
+
+.tab {
+    display: none;
+    padding: 0px;
+    position: absolute;
+    top: 101px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow-y: scroll;
+}
+
+.tab .tab-content,
+.tab.tab-content {
+    padding: 64px;
+}
+
+.compact .tab {
+    top: 120px;
+}
+
+.visible {
+    display: block;
+}
+
+.documentation {
+    width: 100%;
+    height: 100px;
+}
+
+.j-editor .editor-control .form-element-container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.editor-controls button.preview-button {
+    padding-bottom: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: auto;
+}
+
+.editor-controls {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+/**** loading ******/
+.tag-dropdown.search-loading .dropdown-form-element {
+    background: linear-gradient(90deg, rgba(13, 103, 161, 1) 10%, rgba(79, 174, 234, 1) 50%, rgba(13, 103, 161, 1) 90%);
+    background-size: 700% 100%;
+    -webkit-animation: AnimationName 2s ease-out infinite;
+    -moz-animation: AnimationName 2s ease-out infinite;
+    animation: AnimationName 2s ease-out infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.r-logo.visible1 {
+    display: block;
+    animation: RLogoAnimation1 4s ease-out;
+}
+
+@keyframes RLogoAnimation1 {
+    0% {
+        opacity: 1;
+    }
+
+    1% {
+        opacity: 0.04;
+    }
+
+    10% {
+        opacity: 0.12;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.05;
+    }
+
+    97% {
+        opacity: 0.04;
+    }
+
+    98% {
+        opacity: 0.9;
+    }
+
+    99% {
+        opacity: 0.02;
+    }
+
+    100% {
+        opacity: 0.01;
+    }
+}
+
+.r-logo.visible2 {
+    display: block;
+    animation: RLogoAnimation2 2s ease-out;
+}
+
+@keyframes RLogoAnimation2 {
+    0% {
+        opacity: 1;
+    }
+
+    5% {
+        opacity: 0.0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0.0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0.0;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.0;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    51% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+
+    100% {
+        opacity: 0;
+        margin-top: -500px;
+    }
+}
+
+.r-logo.visible3 {
+    display: block;
+    animation: RLogoAnimation3 2s ease-out;
+}
+
+@keyframes RLogoAnimation3 {
+    0% {
+        opacity: 1;
+    }
+
+    5% {
+        opacity: 0.0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0.0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0.0;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.0;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    51% {
+        opacity: 1;
+        margin-left: -150px;
+    }
+
+    67% {
+        opacity: 1;
+        margin-left: -250px;
+    }
+
+    74% {
+        opacity: 1;
+        margin-left: 250px;
+    }
+
+    84% {
+        opacity: 1;
+        margin-left: -250px;
+    }
+
+    94% {
+        opacity: 1;
+        margin-left: 250px;
+        margin-top: -150px;
+    }
+
+    100% {
+        opacity: 0;
+        margin-top: 0px;
+        margin-left: -150px;
+    }
+}
+
+.r-logo.visible4 {
+    display: block;
+    animation: RLogoAnimation4 2s ease-out;
+}
+
+@keyframes RLogoAnimation4 {
+    0% {
+        opacity: 1;
+    }
+
+    5% {
+        opacity: 0.0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0.0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0.0;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.0;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    51% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+
+    67% {
+        opacity: 1;
+        margin-top: -250px;
+    }
+
+    74% {
+        opacity: 1;
+        margin-top: 250px;
+    }
+
+    84% {
+        opacity: 1;
+        margin-top: -250px;
+    }
+
+    94% {
+        opacity: 1;
+        margin-top: 250px;
+    }
+
+    100% {
+        opacity: 0;
+        margin-top: -150px;
+    }
+}
+
+.r-logo.visible5 {
+    display: block;
+    animation: RLogoAnimation5 4s ease-out;
+}
+
+@keyframes RLogoAnimation5 {
+    0% {
+        opacity: 1;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    2% {
+        opacity: 1.0;
+    }
+
+    3% {
+        opacity: 0;
+    }
+
+    4% {
+        opacity: 1.0;
+    }
+
+    5% {
+        opacity: 0.0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0.0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0.0;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0.0;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.rc-dropdown .dropdown-options .dropdown-option:first-child {
+    font-weight: bold;
+}
+
+.tab {
+    
+    background: gray url(/exr_bg_f.webp) 0%;
+    background-size: cover;
+}
+
+.j-editor .tab.tab-content>div {
+    width: 900px;
+    padding: 60px;
+    margin-top: -65px;
+    /*background: radial-gradient(#1ba6ff, transparent) #1982c5;*/
+    left: 50%;
+    position: absolute;
+    background: rgb(0, 0, 0, 0.5);
+    margin-left: -510px;
+    box-shadow: 1px 3px 30px rgb(0 0 0 / 50%);
+    color: white;
+    /* backdrop-filter: blur(8px);*/
+}
+
+@media only screen and (max-width: 600px) {
+
+    .editor-controls .tag-dropdown {
+        flex-grow: 1;
+        max-width: 100%;
+        width: 50%;
+        margin-top: 8px;
+    }
+
+    .editor-controls .control-settings,
+    .control-save {
+        margin-top: 8px;
+    }
+
+    .editor-controls {
+        flex-wrap: wrap;
+    }
+
+    .j-editor .tab {
+        top: 129px !important;
+    }
+
+    .j-editor .rc-dropdown {
+        width: 60px;
+    }
+
+    .j-editor .editor-controls .tab-dropdown .dropdown-form-element {
+        max-width: 100px;
+        text-overflow: ellipsis;
+        margin-right: 8px;
+    }
+
+    .editor-controls .editor-control {
+        margin-top: 8px;
+    }
+
+    .editor-controls {
+        padding: 18px;
+    }
+
+    .editor-controls .menu-dropdown .dropdown,
+    .editor-controls .editor-control {
+        margin-right: 8px;
+    }
+
+    .j-editor .editor-controls.rc-dropdown .dropdown-form-element {
+        margin-right: 8px;
+    }
+
+    .j-editor .tab.tab-content {
+        padding: 24px;
+    }
+}
+
+.j-editor .translation-info {
+    background: rgba(0,0,0,0.3);
+}
+
+.editor-controls .tab-dropdown .dropdown-option, .editor-controls .rc-dropdown .dropdown-option {
+    white-space: nowrap;
+    padding-right: 32px;
+}
+
+.j-settings a {
+    color: gray;
+}
+
+.j-editor .paginator a {
+    background: rgba(0,0,0,0.2);
+}
+
+.j-editor .paginator a:hover {
+    background: rgba(0,0,0,0.6);
+}
+
+.j-editor .paginator a.current-page {
+    background: rgba(0, 110, 255, 0.555);
+}

@@ -1,0 +1,5 @@
+<div class="form-textarea {this.class}">
+	<label class="form-label" if="this.label !== undefined">{translate(this.label)}</label>
+	<textarea name="{this.name}" class="form-element" spellcheck="false" element="textarea" readonly="{this.readonly}" (blur)="this.isValid()" (input)="this.handleInput(node)">{this.value}</textarea> 
+	<p class="error-message" if="!!this.errorMessage">{this.errorMessage}</p>
+</div>

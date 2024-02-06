@@ -1,0 +1,36 @@
+.tab-container {
+	padding-top: 8px;
+	margin-bottom:0px;
+    
+}
+
+.tabs-box::-webkit-scrollbar {
+    display: none;
+}
+
+.tabs-box {
+	white-space: nowrap;
+	overflow-x: scroll;
+    min-height: 3px;
+}
+
+.no-tabs {
+	visibility: hidden;
+}
+
+.tab-item {
+	display: inline-block;
+	padding-left:16px;
+	padding-right:16px;
+	padding-top:8px;
+	padding-bottom: 11px;
+	cursor:pointer;
+}
+
+.tab-item.active {
+	border-bottom: 3px solid #4682e2;
+	padding-bottom:8px;
+    border-bottom: 5px solid black;
+    padding-bottom: 8px;
+    font-weight: bold;
+}

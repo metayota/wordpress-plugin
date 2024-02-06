@@ -1,0 +1,60 @@
+<div if="!!this.repository">
+    <a link="/editor/view/rc.sync/{this.repository}">Repositories</a> &raquo; Compare
+</div>
+<div>
+    <h1>Changes for resource "{this.resourcename}"</h1>
+    <!--p>Compare version {this.versiona} to {this.versionb}</p-->
+    
+    <div if="!!this.recentResource and !!this.newResource">
+        <div if="this.recentResource.hash == this.newResource.hash">
+            <h2>The resources did not change.</h2>
+        </div>
+
+        <div if="this.recentResource.title != this.newResource.title">
+            <h2>Title changed from "{this.recentResource.title}" to "{this.newResource.title}"</h2>
+        </div>
+
+        <div if="this.recentResource.vendor != this.newResource.vendor">
+            <h2>Vendor changed from "{this.recentResource.vendor}" to "{this.newResource.vendor}"</h2>
+        </div>
+
+        <div if="this.recentResource.license != this.newResource.license">
+            <h2>License changed from "{this.recentResource.license}" to "{this.newResource.license}"</h2>
+        </div>
+
+        <div if="this.recentResource.version != this.newResource.version">
+            <h2>Version changed from "{this.recentResource.version}" to "{this.newResource.version}"</h2>
+        </div>
+
+        <div if="!!this.recentImplementation && !!this.newImplementation">
+            <h2>Implementation</h2>
+            <tabs (change)="this.changeTab(event)" tabs="{this.implementationKeys}" active="{this.currentTab}"></tabs>
+            <rc.diff original="{this.recentImplementation[ this.currentTab ] ? this.recentImplementation[ this.currentTab ] : ''}" updated="{this.newImplementation[ this.currentTab ] ? this.newImplementation[ this.currentTab ] : ''}"></rc.diff>
+        </div>
+
+        <div if="this.recentResource.documentation != this.newResource.documentation">
+            <h2>Documentation</h2>
+            <h3>Recent documentation</h3>
+            <p>{this.recentResource.documentation ? this.recentResource.documentation : '(No documentation)'}</p>
+            <h3>New documentation</h3>
+            <p>{this.newResource.documentation ? this.newResource.documentation : '(No documentation)'}</p>
+        </div>
+
+        <div if="!!this.recentParams">
+            <h2>Parameters</h2>
+            <rc.parameters.view label="Recent parameters" parameters="{this.recentParams}"></rc.parameters.view>
+            <rc.parameters.view label="New parameters" parameters="{this.newParams}"></rc.parameters.view>
+        </div>
+
+        <div if="!!this.recentDependencies">
+            <h2>Dependencies</h2>
+            <rc.dependencies.view label="Recent dependencies" dependencies="{this.recentDependencies}"></rc.dependencies.view>
+            <rc.dependencies.view label="New dependencies" dependencies="{this.newDependencies}"></rc.dependencies.view>
+        </div>
+
+        <div if="!this.repository"> 
+            <form.button (click)="this.toTask()" label="Go to task"></form.button>
+            <form.button (click)="this.seeChanges()" label="See changes"></form.button>
+        </div>
+    </div>
+</div>

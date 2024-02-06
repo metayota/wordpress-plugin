@@ -1,0 +1,16 @@
+<div>
+    <table class="table">
+        <thead>
+            <tr for="column of this.columns">
+                <th style="width:{column.width}%;">{column.title}</th>
+            </tr>
+        </thead>
+		<tbody for="item of this.data">
+			<tr for="column of this.columns">
+				<td>
+					{this.format(item[column.name])}
+				</td>
+			</tr>
+		</tbody>
+    </table>
+</div>

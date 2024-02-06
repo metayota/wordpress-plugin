@@ -1,0 +1,19 @@
+{
+  "tag": "div",
+  "name": "Know-how",
+  "items": [
+    {
+      "tag": "docs.article",
+      "items": [],
+      "name": "Know-how article",
+      "parameters": {
+        "title": "Skills",
+        "subtitle": "If you are interested in earning money online, please fill out the skills form!",
+        "intro": "What computer knowledge do you have? What languages do you speak?",
+        "text": "Get offers for small tasks like implementing a component in JavaScript or PHP! Fill out all your knowledge to see the tasks available!",
+        "image": "screenshot_knowhow.png",
+        "description": "Please click on the checkboxes with the skills. As soon as a checkbox is clicked, detailed information can be provided.\nThe information is used for the \"Tasks\" area to make suitable suggestions for paid programming tasks. So you can earn money online by doing smaller tasks like programming scripts.\nYou will receive emails for suitable offers. Please also log in regularly to see whether there are suitable jobs for you."
+      }
+    }
+  ]
+}

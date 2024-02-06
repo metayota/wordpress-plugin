@@ -1,0 +1,38 @@
+.jj-play {
+    padding: 64px;
+}
+
+.jj-play-preview {
+    background: white;
+    height: 500px;
+    border: 1px dashed gray;
+}
+
+.jj-play .last-events {
+    max-height: 200px;
+    overflow: scroll;
+}
+
+.jj-play-preview iframe {
+    border: none;
+}
+
+.jj-play-preview-fullscreen {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: scroll;
+    border: none;
+}
+
+.toggle-fullscreen {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.webservice-result {
+    white-space: pre;
+}

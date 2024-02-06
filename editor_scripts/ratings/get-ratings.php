@@ -1,0 +1,2 @@
+<?php namespace Metayota; include_once('../metayota/library.php');  ?>$ratings = $db->fetchAllQuery("SELECT * FROM rating r LEFT JOIN user u ON u.id = r.user_id WHERE resource_name=:resource_name",array('resource_name' => $data['resource_name']));
+echo json_encode($ratings);

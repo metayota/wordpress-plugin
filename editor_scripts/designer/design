@@ -1,0 +1,24 @@
+{
+  "tag": "div",
+  "name": "User-Administration",
+  "items": [
+    {
+      "tag": "h1",
+      "items": [],
+      "name": "Title",
+      "parameters": {
+        "content": "Administer User"
+      }
+    },
+    {
+      "tag": "database.table.editor",
+      "items": [],
+      "name": "Database Administrator",
+      "parameters": {
+        "resourcetype": "documentation-skills",
+        "table": "skills",
+        "show-description": true
+      }
+    }
+  ]
+}

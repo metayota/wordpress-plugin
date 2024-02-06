@@ -1,0 +1,27 @@
+#vscodeeditor {
+    width: 100%;
+    left: 0px; 
+    right: 0px;
+    position: absolute;
+    top: 47px;
+    bottom: 0px;
+    min-height:300px;
+    background: white;
+}
+
+#vscodeeditor .highlight {
+    border-bottom: 2px dotted red;
+}
+
+.myInlineDecoration {
+	color: red !important;
+	cursor: pointer;
+	text-decoration: underline;
+	font-weight: bold;
+	font-style: oblique;
+}
+.myLineDecoration {
+	background: red;
+	width: 5px !important;
+	left: 42px !important;
+}

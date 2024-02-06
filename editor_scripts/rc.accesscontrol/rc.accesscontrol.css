@@ -1,0 +1,19 @@
+.editor-plugin-accesscontrol .usergroup {
+    display:inline-block;
+    margin-right: 21px;
+}
+
+.editor-plugin-accesscontrol table {
+    width: 100%;
+}
+
+.editor-plugin-accesscontrol table td {
+    width: 50%;
+}
+
+.tab.tab-access {
+    padding-top: 42px;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-bottom: 64px;
+}

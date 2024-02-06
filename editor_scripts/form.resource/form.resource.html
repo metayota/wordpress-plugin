@@ -1,0 +1,13 @@
+<div class="jj-form-resource">
+    <h2 if="this.label != undefined">{ this.label != undefined ? translate(this.label) : (this.resource ? this.resource.title : '') }</h2>
+    <p if="this.subtitle != null">{this.subtitle}</p>
+    <form (submit)="this.saveClicked()" autocomplete="{ this.autocomplete == true ? 'true' : 'false' }" target="{this.target ? this.target : '_self'}" element="form" method="{this.method}" action="{this.action}">
+        <design.resparameter readonly="{this.readonly}" showdocumentation="{this.showdocumentation}" documentation="{this.documentation}" (change)="this.changed(event)" element="parameterEl" tag="{this.resource}" value="{this.value}"></design.resparameter>
+        <div if="this.submitlabel != null">
+            <form.button icon="{this.icon}" enabled="{this.enabled && (this.submited !== true)}" (click)="this.saveClicked()" label="{this.submitlabel != null ? translate(this.submitlabel) : translate('save')}"></form.button>
+        </div>
+        <div if="this.cancellabel != null">
+            <form.button enabled="{this.enabled}" (click)="this.cancelClicked()" label="{this.cancellabel}"></form.button>
+        </div>
+    </form>
+</div>

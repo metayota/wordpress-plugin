@@ -1,0 +1,19 @@
+<div>
+    <h1>Webspace Starter Edition</h1>
+    <p>Get the Webspace Starter Edition server with 1 GB storage, PHP and MySQL support for free.</p>
+    <p>Choose your preferred software:</p>
+    <ul>
+        <li>Metayota PHP Engine</li>
+        <li>Wordpress</li>
+        <li>No preinstalled software</li>
+    </ul>
+    <p>
+        It is possible to rename your server, and add a domain in a later step.
+    </p>
+    <div if="this.creating">
+        <loader ></loader>
+    </div>
+    <div if="!this.creating">
+        <form.resource (submit)="this.createFreeServer(event.software)" resourcetype="create-free-webspace" submitlabel="Create Free Webspace"></form.resource>
+    </div>
+</div>

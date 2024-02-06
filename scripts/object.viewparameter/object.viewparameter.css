@@ -1,0 +1,15 @@
+.object-view-parameter {
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.object-view-parameter label {
+    display: inline-block;
+    width: 280px;
+    font-weight: normal;
+}
+
+.object-view-content {
+    display: inline-block;
+    font-weight: bold;
+}

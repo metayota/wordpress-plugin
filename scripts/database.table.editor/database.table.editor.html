@@ -1,0 +1,29 @@
+<div. class="database-editor">
+    <h1>{this.title}</h1>
+    <form.text placeholder="Search" (change)="this.searchChanged(event)"></form.text> 
+    <div style="overflow-x: scroll;max-width: 100%;">
+    <table if="this.objs and this.objs.length > 0" class="table" >
+        <thead>
+            <tr if="this.resource != undefined" for="parameter of this.resource.parameters">
+                <th (click)="this.sortBy(parameter.name)" >{parameter.title} {this.getSortIndicator(parameter.name)}</th>
+                <th last>Actions</th>
+            </tr>
+        </thead>
+        <tbody for="obj of this.objs">
+            <tr if="this.resource != undefined" for="parameter of this.resource.parameters">
+                <td><object.viewparameter showlabel="{false}" parameter="{parameter}" value="{obj[parameter.name]}"></object.viewparameter></td>
+                <td last>
+                    <i (click)="this.editRow( obj.id )" class="action"><img class="icon" src="/resource/rc.icon/edit.svg"/></i>
+                    <i (click)="this.deleteRow( obj.id )" class="action"><img class="icon" src="/resource/rc.icon/delete.svg"/></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <div if="this.pages && this.pages.length > 1" class="pages" for="page of this.pages">
+        
+            <form.button class="{page == this.page ? 'highlighted' : ''}" (click)="this.pageChanged(page)" label="{page}"></form.button>
+        
+    </div>
+    <form.button (click)="this.showAddDialog()" label="<?= translate('add') ?>"><form.button>
+</div>

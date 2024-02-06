@@ -1,0 +1,5 @@
+<div>
+    <div if="this.resolvedType != undefined">
+        <include element="include" attributes="{this.attributesForElement}" (change)="this.resourceChanged(event)" tag="{this.resolvedType.editor}"></include>
+    </div>
+</div>

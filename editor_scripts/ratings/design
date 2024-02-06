@@ -1,0 +1,40 @@
+{
+  "name": "div",
+  "tag": "div",
+  "items": [
+    {
+      "tag": "title",
+      "items": [],
+      "name": "title",
+      "parameters": {
+        "title": "Ratings"
+      }
+    },
+    {
+      "tag": "form.resource",
+      "items": [],
+      "name": "add rating",
+      "parameters": {
+        "resourcetype": "rating",
+        "label": "Add Rating",
+        "submitlabel": "Rate Resource"
+      }
+    },
+    {
+      "tag": "db.table",
+      "items": [],
+      "name": "rating",
+      "parameters": {
+        "table": "rating",
+        "resourcetype": "rating",
+        "where": [
+          {
+            "field": "resource_name",
+            "value": "{this.resourcename}"
+          }
+        ],
+        "label": "Ratings for {this.resourcename}!!!"
+      }
+    }
+  ]
+}

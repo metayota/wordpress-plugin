@@ -1,0 +1,50 @@
+{
+  "tag": "div",
+  "name": "Energy Drink",
+  "items": [
+    {
+      "tag": "website.page.header",
+      "items": [],
+      "name": "LOUIS XIV Energy Title",
+      "parameters": {
+        "title": "Energy Drink - Louis XIV",
+        "text": "test",
+        "subtitle": "Joel founded the company in the Seychelles and made the corporate identity design including logo-design, web-design, product images 3D-rendering, law-compilant food-label design, organizing marketing, promotion, ..."
+      }
+    },
+    {
+      "tag": "website.portfolio",
+      "items": [],
+      "name": "Energy Drink",
+      "parameters": {
+        "content": "test",
+        "items": [
+          {
+            "title": "Energy Drink",
+            "teaser": "The production of the energy drink in Austria (factory) / Thailand (consulting)",
+            "picture": "140829_ZagatoPerana_marketingshots_persp_0000_post.jpg",
+            "txt": "The product is an energy drink comparable to Red Bull, but with a flavor which \nis optimized to mix with vodka. The marketing idea is to create an energy \ndrink with lifestyle, events, parties-marketing instead of a drink \npromoted as a sports drink."
+          },
+          {
+            "title": "Energy Drink",
+            "teaser": "Food-label",
+            "picture": "24carat_marketingshot3_002ps_2.jpg",
+            "txt": "Food label in German and English for USA."
+          },
+          {
+            "picture": "marketingshot_carat_cooler_003ps_2.jpg",
+            "title": "Promotion for energy drink at events",
+            "teaser": "Promotion of energy drink with Google, Lionsgate and at clubs and parties in many countries",
+            "txt": "The launch of the energy drink was attended with great parties and car races. The energy drink is served at many great clubs world-wide."
+          },
+          {
+            "picture": "marketingshot_carat_glass_002ps.jpg",
+            "title": "Taste for energy drink",
+            "teaser": "Energy drink flavor optimized to mix with vodka.",
+            "txt": "The energy drink flavor has a really good acceptance, which is higher than Red Bull and especially mixed with vodka with great results!"
+          }
+        ]
+      }
+    }
+  ]
+}

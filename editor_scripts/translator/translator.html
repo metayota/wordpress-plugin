@@ -1,0 +1,51 @@
+<div class="translator">
+<!-- margin-top:-12px;background:white;padding-left:64px;padding-right:64px;padding-top:32px;position:relative;padding-bottom:64px;margin-bottom:64px;border-bottom-left-radius:40px;border-bottom-right-radius:40px; -->
+    <h1>Translator</h1>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;align-items:end;">
+        <div style="margin-right:20px">
+            <form.text value="{this.search}" (change)="this.updateSearch(event)" label="Suchen"></form.text>
+        </div>
+        <div style="margin-right:20px">
+            <form.button (click)="this.addNewTranslation(event)" label="add_translation">
+        </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr">
+        <dropdown value="{translate('language_code')}" (change)="this.updateLanguageA(event)" label="<?= translate('language_a') ?>"
+            options="{ this.languages }">
+        </dropdown>
+        <dropdown (change)="this.updateLanguageB(event)" label="<?= translate('language_b') ?>"
+            options="{ this.languages }">
+        </dropdown>
+    </div>
+
+
+    <div for="translation of this.translations">
+        <h3>{translation.translation_key}</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr" if="!this.displayTextarea(translation)">
+            <div style="margin-right:20px">
+                <form.text (enter)="this.pressedEnter(translation)" (change)="this.changedTranslation(translation,event)" value="{translation.translation}"></form.text>
+            </div>
+            <div style="margin-left:20px" if="this.language_b != undefined">
+                <form.text (enter)="this.pressedEnterB(translation)" (change)="this.changedTranslationB(translation,event)" value="{translation.translation_b}"></form.text>
+            </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr" if="this.displayTextarea(translation)">
+            <div style="margin-right:20px">
+                <form.textarea (change)="this.changedTranslation(translation,event)" value="{translation.translation}"></form.textarea>
+            </div>
+            <div style="margin-left:20px" if="this.language_b != undefined">
+                <form.textarea (change)="this.changedTranslationB(translation,event)" value="{translation.translation_b}"></form.textarea>
+            </div>
+        </div>
+    </div>
+
+    <form.button (click)="this.saveChanges()" label="Save"></form.button>
+
+    <div if="this.pages && this.pages.length > 1" class="pages" for="page of this.pages">
+        <form.button class="{page == this.page ? 'highlighted' : ''}" (click)="this.pageChanged(page)" label="{page}">
+        </form.button>
+    </div>
+
+</div>

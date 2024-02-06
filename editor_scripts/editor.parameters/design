@@ -1,0 +1,39 @@
+{
+  "name": "My demo page design",
+  "tag": "div",
+  "items": [
+    {
+      "tag": "title",
+      "items": [],
+      "name": "Title: \"Hi\"",
+      "parameters": {
+        "title": "Hi"
+      }
+    },
+    {
+      "tag": "form.resource",
+      "items": [],
+      "name": "User form",
+      "parameters": {
+        "resourcetype": "user"
+      }
+    },
+    {
+      "tag": "form.file",
+      "items": [],
+      "name": "\"Choose file...\" element"
+    },
+    {
+      "tag": "form.button",
+      "items": [],
+      "name": "\"Submit!\" button",
+      "parameters": {
+        "label": "Submit!"
+      }
+    }
+  ],
+  "parameters": {
+    "name": "dsasda",
+    "resourcetype": "user"
+  }
+}

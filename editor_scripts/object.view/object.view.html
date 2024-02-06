@@ -1,0 +1,8 @@
+<div class="object-view">
+    <h3 if="this.label != undefined">{this.label}</h3>
+    <div if="this.resource != undefined" for="parameter of this.resource.parameters">
+        <div if="this.obj[parameter.name] != null && this.obj[parameter.name] != ''" class="obj-view-value">
+            <object.viewparameter parameter="{parameter}" value="{this.obj[parameter.name]}"></object.viewparameter>
+        </div>
+    </div>
+</div>

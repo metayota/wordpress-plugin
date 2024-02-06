@@ -1,0 +1,82 @@
+{
+  "name": "basis",
+  "tag": "div",
+  "items": [
+    {
+      "tag": "title",
+      "items": [],
+      "name": "Titel",
+      "parameters": {
+        "title": "Neue User"
+      }
+    },
+    {
+      "tag": "line.chart",
+      "items": [],
+      "name": "Chart",
+      "parameters": {
+        "label": "test",
+        "value": "test 12",
+        "type": "text",
+        "resourcetype": "form.login",
+        "dataset": [
+          {
+            "name": "01.01.2020",
+            "value": "120"
+          },
+          {
+            "name": "01.02.2020",
+            "value": "150"
+          },
+          {
+            "name": "01.03.2020",
+            "value": "180"
+          },
+          {
+            "name": "01.04.2020",
+            "value": "280"
+          }
+        ]
+      }
+    },
+    {
+      "tag": "form.number",
+      "items": [],
+      "name": "Preis",
+      "parameters": {
+        "value": "120000",
+        "label": "Preis",
+        "suffix": "CHF"
+      }
+    },
+    {
+      "tag": "dropdown",
+      "items": [],
+      "name": "Dropdown",
+      "parameters": {
+        "label": "Bitte wählen",
+        "options": [
+          {
+            "name": "Ja",
+            "value": "yes"
+          },
+          {
+            "name": "Nein",
+            "value": "no"
+          }
+        ]
+      }
+    },
+    {
+      "tag": "db.table",
+      "items": [],
+      "name": "item315",
+      "parameters": {
+        "tablename": "user"
+      }
+    }
+  ],
+  "parameters": {
+    "content": ""
+  }
+}

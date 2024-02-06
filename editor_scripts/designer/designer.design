@@ -1,0 +1,52 @@
+{
+  "tag": "div",
+  "name": "Examples",
+  "items": [
+    {
+      "tag": "h1",
+      "items": [],
+      "name": "Title",
+      "parameters": {
+        "content": "Example Components"
+      }
+    },
+    {
+      "tag": "div",
+      "items": [],
+      "name": "sample text",
+      "parameters": {
+        "txt": "Test",
+        "content": "<p>You can edit this file <a href=\"https://www.metayota.com/editor/resource/example.components/designer\">in the design mode</a> or in the <a href=\"https://www.metayota.com/editor/resource/example.components/vscode\">editor mode</a>!</p>"
+      }
+    },
+    {
+      "tag": "country.select",
+      "items": [],
+      "name": "country",
+      "parameters": {
+        "options": []
+      }
+    },
+    {
+      "tag": "form.resource",
+      "items": [],
+      "name": "user",
+      "parameters": {
+        "resourcetype": "user"
+      }
+    },
+    {
+      "tag": "form.button",
+      "items": [],
+      "name": "Submit",
+      "parameters": {
+        "(click)": "this.submit()",
+        "label": "Submit"
+      }
+    }
+  ],
+  "parameters": {
+    "label": "Submit",
+    "(click)": "this.sendData()"
+  }
+}
