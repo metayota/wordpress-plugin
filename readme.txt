@@ -1,6 +1,6 @@
 === NON-COMMERCIAL VERSION ===
 
-PLEASE READ THE LICENSE TERMS MENTIONED LATER
+PLEASE READ THE LICENSE TERMS
 
 === Metayota Editor ===
 Contributors: (Replace with WordPress.org usernames of contributors)
